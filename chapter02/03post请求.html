@@ -1,0 +1,1022 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第3节：post请求 | 知了fastapi从入门到项目实战</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter02/04响应体.html" />
+    
+    
+    <link rel="prev" href="../chapter02/02get请求.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="第3节：post请求"
+        data-filepath="chapter02/03post请求.md"
+        data-basepath=".."
+        data-revision="Mon Aug 30 2021 16:12:49 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        课程大纲
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01/index.html">
+            
+                
+                    <a href="../chapter01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第一章：前奏
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter01/01fastapi介绍.html">
+            
+                
+                    <a href="../chapter01/01fastapi介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        第1节：fastapi介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter01/02虚拟环境.html">
+            
+                
+                    <a href="../chapter01/02虚拟环境.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        第2节：虚拟环境
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter01/03类型提示.html">
+            
+                
+                    <a href="../chapter01/03类型提示.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        第3节：类型提示
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter01/04python中的typing.html">
+            
+                
+                    <a href="../chapter01/04python中的typing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        第4节：python中的typing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter01/05Pydantic模型.html">
+            
+                
+                    <a href="../chapter01/05Pydantic模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        第5节：Pydantic模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/index.html">
+            
+                
+                    <a href="../chapter02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第二章：fastapi基础篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter02/01初识fastapi.html">
+            
+                
+                    <a href="../chapter02/01初识fastapi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        第1节：初识fastapi
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/02get请求.html">
+            
+                
+                    <a href="../chapter02/02get请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        第2节：get请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="chapter02/03post请求.html">
+            
+                
+                    <a href="../chapter02/03post请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        第3节：post请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter02/04响应体.html">
+            
+                
+                    <a href="../chapter02/04响应体.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        第4节：响应体
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chapter02/05文件上传.html">
+            
+                
+                    <a href="../chapter02/05文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        第5节：文件上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="chapter02/06cookie.html">
+            
+                
+                    <a href="../chapter02/06cookie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        第6节：cookie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="chapter02/07跨域.html">
+            
+                
+                    <a href="../chapter02/07跨域.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        第7节：跨域
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="chapter02/08OAuth2.html">
+            
+                
+                    <a href="../chapter02/08OAuth2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        第8节：OAuth2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="chapter02/09中间件.html">
+            
+                
+                    <a href="../chapter02/09中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        第9节：中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="chapter02/10依赖注入.html">
+            
+                
+                    <a href="../chapter02/10依赖注入.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        第10节：依赖注入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="chapter02/11数据库.html">
+            
+                
+                    <a href="../chapter02/11数据库.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        第11节：数据库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="chapter02/12项目拆分.html">
+            
+                
+                    <a href="../chapter02/12项目拆分.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.12.</b>
+                        
+                        第12节：项目拆分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="chapter02/13Async.html">
+            
+                
+                    <a href="../chapter02/13Async.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.</b>
+                        
+                        第13节：Async
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="chapter02/14静态文件.html">
+            
+                
+                    <a href="../chapter02/14静态文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.14.</b>
+                        
+                        第14节：静态文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="chapter02/15websocket.html">
+            
+                
+                    <a href="../chapter02/15websocket.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.15.</b>
+                        
+                        第15节：websocket
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="chapter02/16fastapi事件.html">
+            
+                
+                    <a href="../chapter02/16fastapi事件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.16.</b>
+                        
+                        第16节：fastapi事件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="chapter02/17测试.html">
+            
+                
+                    <a href="../chapter02/17测试.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.17.</b>
+                        
+                        第17节：测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="chapter02/18熔断.html">
+            
+                
+                    <a href="../chapter02/18熔断.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.18.</b>
+                        
+                        第18节：熔断
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03/index.html">
+            
+                
+                    <a href="../chapter03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第三章：fastapi实战篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter03/01实战介绍.html">
+            
+                
+                    <a href="../chapter03/01实战介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        第1节：实战介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter03/02部署.html">
+            
+                
+                    <a href="../chapter03/02部署.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        第2节：部署
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04/index.html">
+            
+                
+                    <a href="../chapter04/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第四章：vue部分
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter04/01环境搭建.html">
+            
+                
+                    <a href="../chapter04/01环境搭建.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        第1节：环境搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chapter04/02vue-router路由管理.html">
+            
+                
+                    <a href="../chapter04/02vue-router路由管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        第2节：router的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chapter04/03axios的使用.html">
+            
+                
+                    <a href="../chapter04/03axios的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        第3节：axios的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="chapter04/04get请求.html">
+            
+                
+                    <a href="../chapter04/04get请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        第4节：get请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="chapter04/05post请求.html">
+            
+                
+                    <a href="../chapter04/05post请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        第5节：post请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="chapter04/06文件上传.html">
+            
+                
+                    <a href="../chapter04/06文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        第6节：post请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="chapter04/07element组件.html">
+            
+                
+                    <a href="../chapter04/07element组件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        第7节：element组件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >知了fastapi从入门到项目实战</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="post&#x8BF7;&#x6C42;">post&#x8BF7;&#x6C42;</h1>
+<h2 id="&#x4E00;&#x3001;applicationjson">&#x4E00;&#x3001;application/json</h2>
+<p>&#x8981;&#x6C42;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x662F;json&#x683C;&#x5F0F;</p>
+<p>1.&#x6B63;&#x5E38;&#x7684;&#x7C7B;&#x578B;&#x7533;&#x660E;&#x65B9;&#x5F0F;</p>
+<pre><code class="lang-python"><span class="hljs-decorator">@app.post(&quot;/add/&quot;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(article:dict)</span>:</span>
+    print(article)
+    <span class="hljs-keyword">return</span> article
+</code></pre>
+<h2 id=""><img src="../assets/post.png" alt=""></h2>
+<p>2.&#x7533;&#x660E;Pydantic &#x6A21;&#x578B;&#x65B9;&#x5F0F;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;</p>
+<ul>
+<li>&#x597D;&#x5904;<ul>
+<li>&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x5E94;&#x7684;&#x7C7B;&#x578B;</li>
+<li>&#x6821;&#x9A8C;&#x6570;&#x636E;</li>
+<li>&#x4EE3;&#x7801;&#x5C5E;&#x6027;&#x63D0;&#x793A;</li>
+<li>&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x6A21;&#x578B;</li>
+<li>&#x6210;&#x4E3A;&#x751F;&#x6210;&#x7684; OpenAPI &#x6A21;&#x5F0F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5E76;&#x4E14;&#x88AB;&#x81EA;&#x52A8;&#x5316;&#x6587;&#x6863; UI &#x6240;&#x4F7F;&#x7528;</li>
+</ul>
+</li>
+<li>&#x4F7F;&#x7528;:&#x5355;&#x4E00;&#x7C7B;&#x578B;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI,Body
+
+
+
+<span class="hljs-number">1.</span>&#x5B9A;&#x4E49;&#x6A21;&#x578B;
+    <span class="hljs-keyword">from</span> pydantic <span class="hljs-keyword">import</span> BaseModel
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(BaseModel)</span>:</span>
+        id: int
+        name: str
+        count: int
+
+<span class="hljs-number">2.</span>&#x7533;&#x660E;&#x7C7B;&#x578B;
+<span class="hljs-decorator">    @app.post(&quot;/add/&quot;)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(article:Article)</span>:</span>
+      print(article.name)
+      <span class="hljs-comment"># &#x53EF;&#x4EE5;&#x5F53;&#x6210;dict&#x64CD;&#x4F5C;</span>
+      a = article.dict()
+      print(a.get(<span class="hljs-string">&quot;id&quot;</span>))
+      <span class="hljs-keyword">return</span> article
+
+&#x8BF7;&#x6C42;&#x53C2;&#x6570;,&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x6837;
+{
+    <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">111</span>,
+    <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;xxx&quot;</span>
+}
+
+
+&#x5982;&#x679C;&#x60F3;&#x62E5;&#x6709;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x4F5C;&#x4E3A;key&#xFF0C;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;
+{
+    <span class="hljs-string">&quot;article&quot;</span>:{
+        <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">111</span>,
+        <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;xxx&quot;</span>
+     }
+}
+
+&#x540E;&#x7AEF;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;&#xFF1A;
+<span class="hljs-decorator">@app.post(&quot;/add/&quot;)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(article:Article= Body<span class="hljs-params">(..., embed=True)</span>)</span>:</span>    <span class="hljs-comment"># &#x63D2;&#x5165;</span>
+      <span class="hljs-keyword">return</span> article
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x7C7B;&#x578B;&#x53C2;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x4F53;&#x4E2D;&#x7684;&#x952E;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(BaseModel)</span>:</span>
+    id: int
+    name: str
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(BaseModel)</span>:</span>
+    id: int
+    name: str
+
+<span class="hljs-decorator">@app.post(&quot;/add&quot;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(article:Article,user:User)</span>:</span>
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&quot;user&quot;</span>:user,<span class="hljs-string">&quot;article&quot;</span>:article}
+
+
+&#x8BF7;&#x6C42;&#x53C2;&#x6570;:
+
+{
+ <span class="hljs-string">&quot;article&quot;</span>:
+     {
+         <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">111</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;hallen&quot;</span>
+
+     },
+<span class="hljs-string">&quot;user&quot;</span>:
+    {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">222</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;hallen22&quot;</span>
+    }
+}
+</code></pre>
+<ul>
+<li>&#x591A;&#x4E2A;&#x7C7B;&#x578B;+&#x5355;&#x5B57;&#x6BB5;&#x503C;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI,Body
+
+count:int=Body(...)
+
+&#x4E3E;&#x4F8B;&#xFF1A;
+<span class="hljs-decorator">@app.post(&quot;/add&quot;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(article:Article,user:User,count:int=Body<span class="hljs-params">(...)</span>)</span>:</span>
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&quot;user&quot;</span>:user,<span class="hljs-string">&quot;article&quot;</span>:article,<span class="hljs-string">&quot;count&quot;</span>:count}
+
+&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;
+{
+ <span class="hljs-string">&quot;article&quot;</span>:
+     {
+         <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">111</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;hallen&quot;</span>
+
+     },
+<span class="hljs-string">&quot;user&quot;</span>:
+    {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">222</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;hallen22&quot;</span>
+    },
+<span class="hljs-string">&quot;count&quot;</span>:<span class="hljs-number">3</span>
+}
+</code></pre>
+<ul>
+<li><p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x591A;&#x4E2A;&#x7C7B;&#x578B;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#x65F6;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x7684;&#x53C2;&#x6570;&#x540D;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x4F53;&#x7684;key</li>
+<li>&#x5355;&#x4E2A;&#x7C7B;&#x578B;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4F5C;&#x4E3A;key&#xFF0C;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x5373;&#x53EF;</li>
+</ul>
+</li>
+<li><p>list,set,tuple&#x7B49;&#x7C7B;&#x578B;</p>
+<ul>
+<li><pre><code class="lang-python">&#x5BF9;&#x5217;&#x8868;&#x7B49;&#x91CC;&#x9762;&#x7684;&#x5143;&#x7D20;&#x6CA1;&#x6709;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#xFF1A;
+    tags: list = []
+&#x5BF9;&#x5217;&#x8868;&#x7B49;&#x91CC;&#x9762;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x6709;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#xFF1A;
+    tags: List[str] = []
+
+set&#xFF1A;
+    tags: Set[str] = set()
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x6A21;&#x578B;&#x5D4C;&#x5957;</p>
+<ul>
+<li><pre><code class="lang-python">&#x5B50;&#x6A21;&#x578B;&#xFF1A;
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Image</span><span class="hljs-params">(BaseModel)</span>:</span>
+        url: str
+        name: str
+&#x6A21;&#x578B;&#xFF1A;
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(BaseModel)</span>:</span>
+        id: int
+        name: str
+        image: Optional[Image] = <span class="hljs-keyword">None</span>
+
+&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;
+    {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">111</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;xxxx&quot;</span>,
+        <span class="hljs-string">&quot;image&quot;</span>: {
+            <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://baidu.com/xx.jpg&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x767E;&#x5EA6;&#x56FE;&#x7247;&quot;</span>
+        }
+    }
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x4EFB;&#x610F;&#x6DF1;&#x5EA6;&#x7684;&#x5D4C;&#x5957;&#x6A21;&#x578B;</p>
+<ul>
+<li><pre><code class="lang-python">images: List[Image]
+
+&#x4F20;&#x7684;&#x65F6;&#x5019;images&#x5C31;&#x662F;&#x4E2A;&#x5217;&#x8868;&#x7684;Image&#x6A21;&#x578B;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x4E8C;&#x3001;formdata">&#x4E8C;&#x3001;form-data</h2>
+<p>&#x63A5;&#x6536;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x800C;&#x4E0D;&#x662F; JSON</p>
+<p>1.&#x5B89;&#x88C5;&#x5305;</p>
+<pre><code>pip install python-multipart
+</code></pre><p>2.&#x5BFC;&#x5165;&#x5305;</p>
+<pre><code>from fastapi import FastAPI, Form
+</code></pre><p>3.&#x4F7F;&#x7528;</p>
+<pre><code class="lang-python"><span class="hljs-decorator">@app.post(&quot;/login/&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span><span class="hljs-params">(username: str = Form<span class="hljs-params">(...)</span>, pwd: str = Form<span class="hljs-params">(...)</span>)</span>:</span>
+    <span class="hljs-keyword">return</span> {<span class="hljs-string">&quot;username&quot;</span>: username}
+
+
+&#x6CE8;&#x610F;&#xFF1A;Form&#x4E2D;&#x662F;&#x4E09;&#x4E2A;&#x70B9;
+</code></pre>
+<p>&#x524D;&#x7AEF;&#xFF1A;</p>
+<p><img src="../assets/form_data.png" alt=""></p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x540E;&#x7AEF;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#x540D;&#x5C31;&#x662F;&#x524D;&#x7AEF;&#x8981;&#x4F20;&#x7684;key&#x540D;&#x79F0;&#xFF0C;&#x4E0D;&#x80FD;&#x53D8;</p>
+<h2 id="&#x4E09;&#x3001;&#x6570;&#x636E;&#x6821;&#x9A8C;">&#x4E09;&#x3001;&#x6570;&#x636E;&#x6821;&#x9A8C;</h2>
+<p>&#x9664;&#x4E86;pydantic&#x81EA;&#x5E26;&#x7684;&#x7C7B;&#x578B;&#x6821;&#x9A8C;&#x5916;&#xFF0C;&#x8FD8;&#x60F3;&#x5BF9;&#x5B57;&#x6BB5;&#x7684;&#x957F;&#x5EA6;&#x7B49;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x600E;&#x4E48;&#x505A;&#xFF1F;</p>
+<p>1.&#x4F7F;&#x7528;<code>Field</code></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pydantic <span class="hljs-keyword">import</span> BaseModel, Field
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(BaseModel)</span>:</span>
+    id: int = Field(..., gt=<span class="hljs-number">0</span>, description=<span class="hljs-string">&quot;id&#x5927;&#x4E8E;0&quot;</span>)
+    name: str
+</code></pre>
+<p>Field &#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x548C; Query&#x3001;Path &#x548C; Body &#x76F8;&#x540C;&#xFF0C;&#x5305;&#x62EC;&#x5B83;&#x4EEC;&#x7684;&#x53C2;&#x6570;&#x7B49;&#x7B49;&#x4E5F;&#x5B8C;&#x5168;&#x76F8;&#x540C;</p>
+<p>2.&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x6821;&#x9A8C;&#xFF0C;&#x6BD4;&#x5982;url&#x7684;&#x6821;&#x9A8C;</p>
+<ul>
+<li><p>HttpUrl</p>
+<ul>
+<li><pre><code class="lang-python"><span class="hljs-keyword">from</span> pydantic <span class="hljs-keyword">import</span> BaseModel, HttpUrl
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Image</span><span class="hljs-params">(BaseModel)</span>:</span>
+    url: HttpUrl
+    name: str
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x7684;&#xFF1A;pydantic&#x7684;<em>init</em>.py&#x4E2D;</p>
+<ul>
+<li><pre><code class="lang-python">__all__ = [
+    <span class="hljs-comment"># network</span>
+    <span class="hljs-string">&apos;AnyUrl&apos;</span>,
+    <span class="hljs-string">&apos;AnyHttpUrl&apos;</span>,
+    <span class="hljs-string">&apos;HttpUrl&apos;</span>,
+    <span class="hljs-string">&apos;stricturl&apos;</span>,
+    <span class="hljs-string">&apos;EmailStr&apos;</span>,
+    <span class="hljs-string">&apos;NameEmail&apos;</span>,
+    <span class="hljs-string">&apos;IPvAnyAddress&apos;</span>,
+    <span class="hljs-string">&apos;IPvAnyInterface&apos;</span>,
+    <span class="hljs-string">&apos;IPvAnyNetwork&apos;</span>,
+    <span class="hljs-string">&apos;PostgresDsn&apos;</span>,
+    <span class="hljs-string">&apos;RedisDsn&apos;</span>,
+    <span class="hljs-string">&apos;validate_email&apos;</span>,
+    <span class="hljs-comment"># parse</span>
+    <span class="hljs-string">&apos;Protocol&apos;</span>,
+    <span class="hljs-comment"># tools</span>
+    <span class="hljs-string">&apos;parse_file_as&apos;</span>,
+    <span class="hljs-string">&apos;parse_obj_as&apos;</span>,
+    <span class="hljs-string">&apos;parse_raw_as&apos;</span>,
+    <span class="hljs-comment"># types</span>
+    <span class="hljs-string">&apos;NoneStr&apos;</span>,
+    <span class="hljs-string">&apos;NoneBytes&apos;</span>,
+    <span class="hljs-string">&apos;StrBytes&apos;</span>,
+    <span class="hljs-string">&apos;NoneStrBytes&apos;</span>,
+    <span class="hljs-string">&apos;StrictStr&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedBytes&apos;</span>,
+    <span class="hljs-string">&apos;conbytes&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedList&apos;</span>,
+    <span class="hljs-string">&apos;conlist&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedSet&apos;</span>,
+    <span class="hljs-string">&apos;conset&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedStr&apos;</span>,
+    <span class="hljs-string">&apos;constr&apos;</span>,
+    <span class="hljs-string">&apos;PyObject&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedInt&apos;</span>,
+    <span class="hljs-string">&apos;conint&apos;</span>,
+    <span class="hljs-string">&apos;PositiveInt&apos;</span>,
+    <span class="hljs-string">&apos;NegativeInt&apos;</span>,
+    <span class="hljs-string">&apos;NonNegativeInt&apos;</span>,
+    <span class="hljs-string">&apos;NonPositiveInt&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedFloat&apos;</span>,
+    <span class="hljs-string">&apos;confloat&apos;</span>,
+    <span class="hljs-string">&apos;PositiveFloat&apos;</span>,
+    <span class="hljs-string">&apos;NegativeFloat&apos;</span>,
+    <span class="hljs-string">&apos;NonNegativeFloat&apos;</span>,
+    <span class="hljs-string">&apos;NonPositiveFloat&apos;</span>,
+    <span class="hljs-string">&apos;ConstrainedDecimal&apos;</span>,
+    <span class="hljs-string">&apos;condecimal&apos;</span>,
+    <span class="hljs-string">&apos;UUID1&apos;</span>,
+    <span class="hljs-string">&apos;UUID3&apos;</span>,
+    <span class="hljs-string">&apos;UUID4&apos;</span>,
+    <span class="hljs-string">&apos;UUID5&apos;</span>,
+    <span class="hljs-string">&apos;FilePath&apos;</span>,
+    <span class="hljs-string">&apos;DirectoryPath&apos;</span>,
+    <span class="hljs-string">&apos;Json&apos;</span>,
+    <span class="hljs-string">&apos;JsonWrapper&apos;</span>,
+    <span class="hljs-string">&apos;SecretStr&apos;</span>,
+    <span class="hljs-string">&apos;SecretBytes&apos;</span>,
+    <span class="hljs-string">&apos;StrictBool&apos;</span>,
+    <span class="hljs-string">&apos;StrictBytes&apos;</span>,
+    <span class="hljs-string">&apos;StrictInt&apos;</span>,
+    <span class="hljs-string">&apos;StrictFloat&apos;</span>,
+    <span class="hljs-string">&apos;PaymentCardNumber&apos;</span>,
+    <span class="hljs-string">&apos;PrivateAttr&apos;</span>,
+    <span class="hljs-string">&apos;ByteSize&apos;</span>,
+    <span class="hljs-comment"># version</span>
+    <span class="hljs-string">&apos;VERSION&apos;</span>,
+]
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter02/02get请求.html" class="navigation navigation-prev " aria-label="Previous page: 第2节：get请求"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter02/04响应体.html" class="navigation navigation-next " aria-label="Next page: 第4节：响应体"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
